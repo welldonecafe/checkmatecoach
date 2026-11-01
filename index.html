@@ -19,25 +19,25 @@
             theme: {
                 extend: {
                     colors: {
-                        // Light-sepia palette
+                        // Light-sepia palette matched to OG Image
                         sepia: {
-                            50: '#fcfbf9',
-                            100: '#f6f3ea', // Primary light-sepia background
-                            200: '#efe8d5',
-                            300: '#e5d9bb',
-                            800: '#5a4f3a',
-                            900: '#4a4131',
+                            50: '#faf6f0',
+                            100: '#f3ead3', // Primary light-sepia background
+                            200: '#e6d5b8',
+                            300: '#d4bb92',
+                            800: '#4a3f31',
+                            900: '#362d22',
                         },
-                        // Brownish-red highlights
+                        // Brownish-red highlights matched to OG image King piece
                         highlight: {
-                            DEFAULT: '#8B3A3A',
-                            hover: '#702D2D',
-                            light: '#a65252'
+                            DEFAULT: '#823725',
+                            hover: '#682c1d',
+                            light: '#a8513c'
                         },
-                        // Deep black/grey for text
+                        // Deep black/grey for text matched to OG image text
                         ink: {
-                            DEFAULT: '#1a1a1a',
-                            light: '#333333'
+                            DEFAULT: '#1c1714',
+                            light: '#3d322b'
                         }
                     },
                     fontFamily: {
@@ -51,15 +51,15 @@
     <style>
         /* Custom styles to enhance the aesthetic */
         body {
-            background-color: #f6f3ea; /* sepia-100 */
-            color: #1a1a1a;
+            background-color: #f3ead3; /* sepia-100 */
+            color: #1c1714;
         }
         .pattern-bg {
-            background-image: radial-gradient(#e5d9bb 1px, transparent 1px);
+            background-image: radial-gradient(#d4bb92 1px, transparent 1px);
             background-size: 24px 24px;
         }
         .glass-nav {
-            background-color: rgba(246, 243, 234, 0.9);
+            background-color: rgba(243, 234, 211, 0.9);
             backdrop-filter: blur(8px);
         }
     </style>
@@ -77,7 +77,7 @@
                             <path d="M12 2C12.5523 2 13 2.44772 13 3V4H15C15.5523 4 16 4.44772 16 5C16 5.55228 15.5523 6 15 6H13V7.20455C14.7252 7.73274 16 9.38776 16 11.3333C16 12.0004 15.8286 12.6315 15.5255 13.188L17.1517 17H19C19.5523 17 20 17.4477 20 18C20 18.5523 19.5523 19 19 19H5C4.44772 19 4 18.5523 4 18C4 17.4477 4.44772 17 5 17H6.8483L8.4745 13.188C8.17135 12.6315 8 12.0004 8 11.3333C8 9.38776 9.27477 7.73274 11 7.20455V6H9C8.44772 6 8 5.55228 8 5C8 4.44772 8.44772 4 9 4H11V3C11 2.44772 11.4477 2 12 2ZM12 9C10.7117 9 9.66667 10.045 9.66667 11.3333C9.66667 12.6217 10.7117 13.6667 12 13.6667C13.2883 13.6667 14.3333 12.6217 14.3333 11.3333C14.3333 10.045 13.2883 9 12 9ZM7.8483 17H16.1517L14.8697 14H9.13032L7.8483 17Z"/>
                             <path d="M4 21C4 20.4477 4.44772 20 5 20H19C19.5523 20 20 20.4477 20 21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21Z"/>
                         </svg>
-                        <span class="font-serif font-bold text-2xl tracking-tight text-ink">Checkmate <span class="text-highlight">Coaching</span></span>
+                        <span class="font-serif font-bold text-2xl tracking-tight text-ink italic">Checkmate <span class="text-highlight">Coaching</span></span>
                     </a>
                 </div>
                 <!-- Desktop Menu -->
@@ -115,7 +115,7 @@
                     <span class="text-highlight italic">Achieve Your Goals.</span>
                 </h1>
                 <p class="mt-4 text-xl md:text-2xl text-ink-light font-light mb-10 max-w-2xl mx-auto">
-                    Get unstuck and find greater personal, emotional, and spiritual enjoyment through personalized, one-on-one engagements.
+                    Get unstuck and find greater personal, emotional, and life fulfillment through personalized, one-on-one engagements.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <a href="#contact" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-lg font-medium rounded-full shadow-lg text-white bg-highlight hover:bg-highlight-hover transition-all transform hover:-translate-y-1">
@@ -155,7 +155,7 @@
                             Paul Roper is a dedicated professional life coach with decades of experience advising, mentoring, and educating individuals, families, and executives. 
                         </p>
                         <p>
-                            His passion lies in helping people break through barriers. Whether you are feeling stuck in your career, seeking deeper spiritual enjoyment, or navigating complex family dynamics, Paul provides the strategic insight and compassionate guidance necessary for meaningful growth.
+                            His passion lies in helping people break through barriers. Whether you are feeling stuck in your career, seeking deeper life fulfillment, or navigating complex family dynamics, Paul provides the strategic insight and compassionate guidance necessary for meaningful growth.
                         </p>
                         <p>
                             Like a grandmaster visualizing the board, Paul helps you see the bigger picture of your life, identifying the best moves to achieve lasting success and personal fulfillment.
@@ -195,7 +195,7 @@
                     </div>
                     <h4 class="text-2xl font-serif font-bold text-ink mb-3">Personal & Emotional</h4>
                     <p class="text-ink-light mb-4 leading-relaxed">
-                        Overcome personal hurdles and find greater emotional and spiritual enjoyment. Get unstuck and rediscover your purpose and passion in daily life.
+                        Overcome personal hurdles and find greater emotional and life fulfillment. Get unstuck and rediscover your purpose and passion in daily life.
                     </p>
                 </div>
 
@@ -249,7 +249,7 @@
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <svg class="w-6 h-6 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-                                    <span class="font-medium text-lg">www.checkmatecoach.com</span>
+                                    <a href="https://www.checkmatecoach.com" class="font-bold text-xl text-white hover:text-sepia-200 underline decoration-2 underline-offset-4 transition-colors">www.checkmatecoach.com</a>
                                 </div>
                             </div>
                         </div>
@@ -312,7 +312,7 @@
                     <path d="M12 2C12.5523 2 13 2.44772 13 3V4H15C15.5523 4 16 4.44772 16 5C16 5.55228 15.5523 6 15 6H13V7.20455C14.7252 7.73274 16 9.38776 16 11.3333C16 12.0004 15.8286 12.6315 15.5255 13.188L17.1517 17H19C19.5523 17 20 17.4477 20 18C20 18.5523 19.5523 19 19 19H5C4.44772 19 4 18.5523 4 18C4 17.4477 4.44772 17 5 17H6.8483L8.4745 13.188C8.17135 12.6315 8 12.0004 8 11.3333C8 9.38776 9.27477 7.73274 11 7.20455V6H9C8.44772 6 8 5.55228 8 5C8 4.44772 8.44772 4 9 4H11V3C11 2.44772 11.4477 2 12 2Z"/>
                     <path d="M4 21C4 20.4477 4.44772 20 5 20H19C19.5523 20 20 20.4477 20 21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21Z"/>
                 </svg>
-                <span class="font-serif font-bold text-xl tracking-tight">Checkmate <span class="text-highlight-light">Coaching</span></span>
+                <span class="font-serif font-bold text-xl tracking-tight italic">Checkmate <span class="text-highlight-light">Coaching</span></span>
             </div>
             
             <div class="text-center md:text-left text-sm text-sepia-300">
@@ -321,7 +321,7 @@
             </div>
             
             <div class="flex space-x-6">
-                <a href="https://www.checkmatecoach.com" class="text-sepia-300 hover:text-white transition-colors text-sm">www.checkmatecoach.com</a>
+                <a href="https://www.checkmatecoach.com" class="text-highlight-light hover:text-white font-bold underline decoration-2 underline-offset-4 transition-colors text-base tracking-wide">www.checkmatecoach.com</a>
             </div>
         </div>
     </footer>
