@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checkmate Coaching by Paul Roper - Professional life coach advising, mentoring, and educating individuals, families, and executives.">
+    <link rel="canonical" href="https://www.checkmatecoach.com" />
+    <title>Checkmate Coaching | Paul Roper</title>
+    
+    <!-- Google Fonts for Modern, Professional Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Light-sepia palette
+                        sepia: {
+                            50: '#fcfbf9',
+                            100: '#f6f3ea', // Primary light-sepia background
+                            200: '#efe8d5',
+                            300: '#e5d9bb',
+                            800: '#5a4f3a',
+                            900: '#4a4131',
+                        },
+                        // Brownish-red highlights
+                        highlight: {
+                            DEFAULT: '#8B3A3A',
+                            hover: '#702D2D',
+                            light: '#a65252'
+                        },
+                        // Deep black/grey for text
+                        ink: {
+                            DEFAULT: '#1a1a1a',
+                            light: '#333333'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles to enhance the aesthetic */
+        body {
+            background-color: #f6f3ea; /* sepia-100 */
+            color: #1a1a1a;
+        }
+        .pattern-bg {
+            background-image: radial-gradient(#e5d9bb 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glass-nav {
+            background-color: rgba(246, 243, 234, 0.9);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-ink selection:bg-highlight selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-sepia-200 transition-all duration-300 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center gap-2 group">
+                        <!-- Chess King SVG Logo -->
+                        <svg class="w-10 h-10 text-highlight transition-transform group-hover:scale-105" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C12.5523 2 13 2.44772 13 3V4H15C15.5523 4 16 4.44772 16 5C16 5.55228 15.5523 6 15 6H13V7.20455C14.7252 7.73274 16 9.38776 16 11.3333C16 12.0004 15.8286 12.6315 15.5255 13.188L17.1517 17H19C19.5523 17 20 17.4477 20 18C20 18.5523 19.5523 19 19 19H5C4.44772 19 4 18.5523 4 18C4 17.4477 4.44772 17 5 17H6.8483L8.4745 13.188C8.17135 12.6315 8 12.0004 8 11.3333C8 9.38776 9.27477 7.73274 11 7.20455V6H9C8.44772 6 8 5.55228 8 5C8 4.44772 8.44772 4 9 4H11V3C11 2.44772 11.4477 2 12 2ZM12 9C10.7117 9 9.66667 10.045 9.66667 11.3333C9.66667 12.6217 10.7117 13.6667 12 13.6667C13.2883 13.6667 14.3333 12.6217 14.3333 11.3333C14.3333 10.045 13.2883 9 12 9ZM7.8483 17H16.1517L14.8697 14H9.13032L7.8483 17Z"/>
+                            <path d="M4 21C4 20.4477 4.44772 20 5 20H19C19.5523 20 20 20.4477 20 21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21Z"/>
+                        </svg>
+                        <span class="font-serif font-bold text-2xl tracking-tight text-ink">Checkmate <span class="text-highlight">Coaching</span></span>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-ink hover:text-highlight font-medium transition-colors">About Paul</a>
+                    <a href="#services" class="text-ink hover:text-highlight font-medium transition-colors">Services</a>
+                    <a href="#contact" class="bg-highlight hover:bg-highlight-hover text-white px-6 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Let's Talk</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-ink hover:text-highlight focus:outline-none p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-sepia-50 border-t border-sepia-200">
+            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-ink hover:text-highlight hover:bg-sepia-100 rounded-md">About Paul</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-ink hover:text-highlight hover:bg-sepia-100 rounded-md">Services</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-highlight font-bold hover:bg-sepia-100 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden pattern-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-ink mb-6 leading-tight">
+                    Master Your Next Move. <br>
+                    <span class="text-highlight italic">Achieve Your Goals.</span>
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl text-ink-light font-light mb-10 max-w-2xl mx-auto">
+                    Get unstuck and find greater personal, emotional, and spiritual enjoyment through personalized, one-on-one engagements.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-lg font-medium rounded-full shadow-lg text-white bg-highlight hover:bg-highlight-hover transition-all transform hover:-translate-y-1">
+                        Start Your Journey
+                    </a>
+                    <a href="#services" class="inline-flex justify-center items-center px-8 py-4 border-2 border-highlight text-lg font-medium rounded-full text-highlight hover:bg-highlight hover:text-white transition-all">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-sepia-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="mb-10 lg:mb-0 relative">
+                    <div class="absolute inset-0 bg-highlight rounded-2xl transform translate-x-4 translate-y-4 opacity-20"></div>
+                    <!-- Placeholder for Paul's Image - styled to fit the theme -->
+                    <div class="relative bg-sepia-200 rounded-2xl p-8 aspect-[4/5] flex items-center justify-center border border-sepia-300 overflow-hidden shadow-xl">
+                        <!-- If an actual photo is available, it would replace this inner div -->
+                        <div class="text-center text-sepia-800">
+                            <svg class="w-32 h-32 mx-auto mb-4 text-highlight opacity-50" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                            </svg>
+                            <p class="font-serif text-2xl font-semibold">Paul Roper</p>
+                            <p class="uppercase tracking-widest text-sm text-highlight mt-1">Professional Coach</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-sm font-bold tracking-widest text-highlight uppercase mb-3">About The Coach</h2>
+                    <h3 class="text-4xl font-serif font-bold text-ink mb-6">Decades of Experience Advising & Mentoring</h3>
+                    <div class="space-y-4 text-lg text-ink-light leading-relaxed">
+                        <p>
+                            Paul Roper is a dedicated professional life coach with decades of experience advising, mentoring, and educating individuals, families, and executives. 
+                        </p>
+                        <p>
+                            His passion lies in helping people break through barriers. Whether you are feeling stuck in your career, seeking deeper spiritual enjoyment, or navigating complex family dynamics, Paul provides the strategic insight and compassionate guidance necessary for meaningful growth.
+                        </p>
+                        <p>
+                            Like a grandmaster visualizing the board, Paul helps you see the bigger picture of your life, identifying the best moves to achieve lasting success and personal fulfillment.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 pt-8 border-t border-sepia-200">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-sepia-200 flex items-center justify-center text-highlight">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-xl text-ink">Trusted Consultant</h4>
+                                <p class="text-ink-light">Serving both educational and corporate environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 pattern-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-highlight uppercase mb-3">Areas of Expertise</h2>
+                <h3 class="text-4xl font-serif font-bold text-ink mb-4">Targeted Coaching for Every Phase of Life</h3>
+                <p class="text-lg text-ink-light">Through personalized, one-on-one engagements, we work together to untangle challenges and design a clear path forward.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-sepia-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-sepia-200 group">
+                    <div class="w-14 h-14 bg-sepia-200 rounded-lg flex items-center justify-center text-highlight mb-6 group-hover:bg-highlight group-hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-serif font-bold text-ink mb-3">Personal & Emotional</h4>
+                    <p class="text-ink-light mb-4 leading-relaxed">
+                        Overcome personal hurdles and find greater emotional and spiritual enjoyment. Get unstuck and rediscover your purpose and passion in daily life.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-sepia-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-sepia-200 group">
+                    <div class="w-14 h-14 bg-sepia-200 rounded-lg flex items-center justify-center text-highlight mb-6 group-hover:bg-highlight group-hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-serif font-bold text-ink mb-3">Business & Executive</h4>
+                    <p class="text-ink-light mb-4 leading-relaxed">
+                        Tailored consulting for executives and professionals. Enhance leadership skills, navigate career transitions, and optimize organizational dynamics.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-sepia-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-sepia-200 group">
+                    <div class="w-14 h-14 bg-sepia-200 rounded-lg flex items-center justify-center text-highlight mb-6 group-hover:bg-highlight group-hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-serif font-bold text-ink mb-3">Education & Families</h4>
+                    <p class="text-ink-light mb-4 leading-relaxed">
+                        Consulting for educational environments and family structures. Build stronger communication, align goals, and foster supportive environments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-sepia-50 border-t border-sepia-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div class="grid md:grid-cols-2">
+                    <!-- Contact Info -->
+                    <div class="bg-highlight p-10 text-white flex flex-col justify-between relative overflow-hidden">
+                        <!-- Decorative Background King -->
+                        <svg class="absolute -bottom-10 -right-10 w-64 h-64 text-highlight-hover opacity-50" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C12.5523 2 13 2.44772 13 3V4H15C15.5523 4 16 4.44772 16 5C16 5.55228 15.5523 6 15 6H13V7.20455C14.7252 7.73274 16 9.38776 16 11.3333C16 12.0004 15.8286 12.6315 15.5255 13.188L17.1517 17H19C19.5523 17 20 17.4477 20 18C20 18.5523 19.5523 19 19 19H5C4.44772 19 4 18.5523 4 18C4 17.4477 4.44772 17 5 17H6.8483L8.4745 13.188C8.17135 12.6315 8 12.0004 8 11.3333C8 9.38776 9.27477 7.73274 11 7.20455V6H9C8.44772 6 8 5.55228 8 5C8 4.44772 8.44772 4 9 4H11V3C11 2.44772 11.4477 2 12 2ZM12 9C10.7117 9 9.66667 10.045 9.66667 11.3333C9.66667 12.6217 10.7117 13.6667 12 13.6667C13.2883 13.6667 14.3333 12.6217 14.3333 11.3333C14.3333 10.045 13.2883 9 12 9Z"/>
+                        </svg>
+                        
+                        <div class="relative z-10">
+                            <h3 class="text-3xl font-serif font-bold mb-4">Ready for your next move?</h3>
+                            <p class="text-highlight-100 mb-8 font-light text-white/90">
+                                Reach out today to schedule an initial consultation. Let's discuss your goals and how a personalized engagement can help you achieve them.
+                            </p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-4">
+                                    <svg class="w-6 h-6 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    <span class="font-medium text-lg">Contact via Form</span>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <svg class="w-6 h-6 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                                    <span class="font-medium text-lg">www.checkmatecoach.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="p-10 bg-sepia-50">
+                        <form action="https://formsubmit.co/Jason.a.deramo@gmail.com" method="POST" class="space-y-6">
+                            <!-- Anti-spam & Config hidden inputs for formsubmit -->
+                            <input type="hidden" name="_subject" value="New Inquiry from Checkmate Coaching Website">
+                            <input type="hidden" name="_captcha" value="false">
+                            <!-- Optional: Redirect to a specific page after submission (leaving commented out to use their default success page)
+                            <input type="hidden" name="_next" value="https://www.checkmatecoach.com/thanks.html">
+                            -->
+
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-ink-light mb-1">Full Name</label>
+                                <input type="text" id="name" name="name" required 
+                                    class="w-full px-4 py-3 rounded-lg border border-sepia-300 bg-white focus:outline-none focus:ring-2 focus:ring-highlight focus:border-transparent transition-shadow text-ink">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-ink-light mb-1">Email Address</label>
+                                <input type="email" id="email" name="email" required 
+                                    class="w-full px-4 py-3 rounded-lg border border-sepia-300 bg-white focus:outline-none focus:ring-2 focus:ring-highlight focus:border-transparent transition-shadow text-ink">
+                            </div>
+
+                            <div>
+                                <label for="interest" class="block text-sm font-medium text-ink-light mb-1">Area of Interest</label>
+                                <select id="interest" name="interest" 
+                                    class="w-full px-4 py-3 rounded-lg border border-sepia-300 bg-white focus:outline-none focus:ring-2 focus:ring-highlight focus:border-transparent transition-shadow text-ink">
+                                    <option value="Personal Coaching">Personal & Emotional Coaching</option>
+                                    <option value="Executive Consulting">Business & Executive Consulting</option>
+                                    <option value="Education/Family">Education & Family Mentoring</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-ink-light mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" required 
+                                    class="w-full px-4 py-3 rounded-lg border border-sepia-300 bg-white focus:outline-none focus:ring-2 focus:ring-highlight focus:border-transparent transition-shadow text-ink resize-none"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-highlight text-white font-bold py-4 px-6 rounded-lg shadow-md hover:bg-highlight-hover hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sepia-900 text-sepia-100 py-12 border-t border-sepia-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <svg class="w-8 h-8 text-highlight-light" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C12.5523 2 13 2.44772 13 3V4H15C15.5523 4 16 4.44772 16 5C16 5.55228 15.5523 6 15 6H13V7.20455C14.7252 7.73274 16 9.38776 16 11.3333C16 12.0004 15.8286 12.6315 15.5255 13.188L17.1517 17H19C19.5523 17 20 17.4477 20 18C20 18.5523 19.5523 19 19 19H5C4.44772 19 4 18.5523 4 18C4 17.4477 4.44772 17 5 17H6.8483L8.4745 13.188C8.17135 12.6315 8 12.0004 8 11.3333C8 9.38776 9.27477 7.73274 11 7.20455V6H9C8.44772 6 8 5.55228 8 5C8 4.44772 8.44772 4 9 4H11V3C11 2.44772 11.4477 2 12 2Z"/>
+                    <path d="M4 21C4 20.4477 4.44772 20 5 20H19C19.5523 20 20 20.4477 20 21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21Z"/>
+                </svg>
+                <span class="font-serif font-bold text-xl tracking-tight">Checkmate <span class="text-highlight-light">Coaching</span></span>
+            </div>
+            
+            <div class="text-center md:text-left text-sm text-sepia-300">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Paul Roper. All rights reserved.</p>
+                <p class="mt-1">Professional Life Coach & Mentor</p>
+            </div>
+            
+            <div class="flex space-x-6">
+                <a href="https://www.checkmatecoach.com" class="text-sepia-300 hover:text-white transition-colors text-sm">www.checkmatecoach.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script for Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = menu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
